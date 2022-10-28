@@ -5,9 +5,9 @@ file=open('/home/ale_pcc/bioinformatica/progetto_tesi/dataset/Phosphorylation_si
 
 colonna=[]
 for linee in file:
-    lista=file.readline().split('\t')
-    if len(lista)>6:
-        colonna.append(lista[6])#metto in lista tutta la colonna con i nomi
+    temp=linee.split('\t')
+    if len(temp)>6:
+        colonna.append(temp[6])#metto in lista tutta la colonna con i nomi
 file.close()
 
 #uso set per avere solo elementi unici e dopo ricreo una lista
